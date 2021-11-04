@@ -34,10 +34,11 @@ $(".ul_navbar a").click(function(){
     autoplay:true,
     responsive:{
         0:{
-            items:1,
+            items:2,
+            margin:15
         },
         600:{
-            items:3
+            items:2
         },
         1200:{
             items:4

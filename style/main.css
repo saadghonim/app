@@ -196,7 +196,7 @@ header{
 @media(max-width:767px){
   .ul_navbar{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100%;
@@ -516,8 +516,8 @@ html[dir="ltr"] .parant_div {
 }
 @media(max-width:992px){
   .Features_parant {
-    padding:70px 0px;
-    margin-bottom: 50px;
+    padding:70px 0px 50px;
+    margin-bottom: 0px;
   }
   .mob_{
     margin-bottom: 30px;
@@ -528,7 +528,7 @@ html[dir="ltr"] .parant_div {
 }
 @media(max-width:767px){
   .div_text h4 {
-    font-size: 20px;
+    font-size: 19px;
   }
   .Features_parant .p_feat{
     width: auto;
@@ -551,7 +551,12 @@ html[dir="ltr"] .parant_div {
   .img_center {
     margin-bottom: 40px;
   }
-
+  .Feat_title_{
+    font-size: 27px;
+  }
+  .Features_parant h3{
+    font-size: 27px;
+  }
 }
 /* ~~~~~~~~~~~~~~~~~~end heaFeaturesder~~~~~~~~~~~~~~~~~~~ */
 
@@ -602,6 +607,10 @@ html[dir="ltr"] .parant_div {
   background-color: rgb(220, 53, 69);
 
 }
+.owl-carousel .owl-item img{
+  max-width: 100%;
+  margin: auto;
+}
 
 @media(max-width:767px){
   .slider_parant p{
@@ -610,6 +619,7 @@ html[dir="ltr"] .parant_div {
   .Feat_title_{
     margin-bottom: 30px;
   }
+
 }
 /* ~~~~~~~~~~~~~~~~~~end slider~~~~~~~~~~~~~~~~~~~ */
 
