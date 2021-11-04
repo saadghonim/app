@@ -1,0 +1,749 @@
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../fonts/Tajawal-ExtraLight.woff2') format('woff2'),
+  url('../fonts/Tajawal-ExtraLight.woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../fonts/Tajawal-Light.woff2') format('woff2'),
+  url('../fonts/Tajawal-Light.woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../fonts/Tajawal-Regular.woff2') format('woff2'), 
+  url('../fonts/Tajawal-Regular.woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../fonts/Tajawal-Medium.woff2') format('woff2'), 
+  url('../fonts/Tajawal-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../fonts/Tajawal-Bold.woff2') format('woff2'), 
+  url('../fonts/Tajawal-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../fonts/Tajawal-ExtraBold.woff2') format('woff2'), 
+  url('../fonts/Tajawal-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../fonts/Tajawal-Black.woff2') format('woff2'), 
+  url('../fonts/Tajawal-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+html[dir="rtl"] body {
+direction: rtl;
+}
+
+html[dir="ltr"] body {
+direction: ltr;
+}
+
+body {
+font-family: "Tajawal";
+}
+
+.ul_gh {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.m_p_gh {
+padding: 0;
+margin: 0;
+}
+
+.anc_gh {
+display: inline-block;
+}
+
+.anc_gh:hover {
+text-decoration: none;
+}
+
+.btn_gh {
+border: none;
+padding: 0;
+background-color: transparent;
+}
+.btn_gh:focus{
+  outline: 0;
+}
+.d_flex {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.moboverlay {
+position: fixed;
+display: none;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+background-color: rgba(0, 0, 0, 0.3);
+z-index: 99;
+overflow: hidden;
+}
+.over{
+  overflow-y: hidden;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 50px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px grey;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0; 
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-image: linear-gradient( -90deg, rgb(36,161,210) 0%, rgb(6,79,129) 100%);
+}
+/* ~~~~~~~~~~~~~~~~start header~~~~~~~~~~~~~~~~~~~ */
+header{
+  padding: 30px 0 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.ul_navbar{
+  display: flex;
+}
+.ul_navbar li a{
+  margin-inline-end: 19px;
+  font-size: 19px;
+  font-family: "Tajawal";
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-transform:capitalize;
+  margin-inline-end: 30px;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+.ul_navbar li a:hover{
+  text-decoration: none;
+}
+.anc_lang{
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "Tajawal";
+  color: #ffffff;
+  transition: .5s;
+}
+.btn_bars{
+  font-size: 16px;
+  color: #ffffff;
+  margin-inline-end: 20px;
+  transition: .5s;
+  display: none;
+}
+.close_{
+  display: none;
+}
+.ul_navbar li a:hover,.anc_lang:hover,.btn_bars:hover,.close_{
+  color: #0a082b;
+}
+@media(max-width:767px){
+  .ul_navbar{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 90%;
+    background-color: #ffffff;
+    z-index: 999;
+    padding: 80px 20px 0;
+    text-align: start;
+
+  }
+  html[dir="ltr"] .ul_navbar {
+    left: 0;
+    }
+    .ul_navbar li a{
+      color: #000000;
+      margin: 0;
+    }
+    .ul_navbar li{
+      margin-bottom: 10px;
+    }
+    .btn_bars{
+      display: block;
+    }
+    .close_{
+      display: block;
+      font-size: 16px;
+      color: #b3acac;
+      transition: .5s;
+      -webkit-transition: .5s;
+      -moz-transition: .5s;
+      -ms-transition: .5s;
+      -o-transition: .5s;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    html[dir="ltr"] .close_ {
+      right: 20px;
+      }
+      header {
+        padding: 10px 0 30px;
+    }
+    .logo img{
+      width: 140px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~end header~~~~~~~~~~~~~~~~~~~ */
+
+
+
+/* ~~~~~~~~~~~~~~~~~~start intro~~~~~~~~~~~~~~~~ */
+.intro_parant{
+  overflow: hidden;
+  margin-bottom: 100px;
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+  padding: 150px 0 100px;
+  clip-path: ellipse(132% 100% at 50% 0%);
+
+
+}
+.backgr_{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  max-width:100%;
+  max-height: 100%;
+}
+.intro{
+  text-align: start;
+}
+.screen_{
+  text-align: center;
+  margin-bottom: -200px;
+  
+}
+.screen_ img{
+  max-width: 100%;
+}
+.intro_text{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.intro_text h3{
+  font-size: 30px;
+  font-family: "Tajawal";
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.intro_text p{
+  font-size: 16px;
+  font-family: "Tajawal";
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 50%;
+}
+.btn_intro a:first-child{
+  margin-inline-end: 10px;
+}
+@media(max-width:992px){
+
+  .intro_text{
+    align-items: center;
+  }
+  .intro_text h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .intro_text p{
+    text-align: justify;
+    text-align-last: center;
+    margin-bottom: 30px;
+  }
+  .screen_ img{
+    margin: 0;
+
+  }
+  .intro_text {
+    margin-bottom: 50px;
+  }
+
+}
+@media(max-width:767px){
+  .btn_intro{
+    display: flex;
+    padding: 0 15px;
+    justify-content: center;
+  }
+  .btn_intro img{
+    width: 150px;
+  }
+  .intro_parant {
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+  }
+
+}
+/* ~~~~~~~~~~~~~~~~~~~~end intro~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~start about_app~~~~~~~~~~~~~~~~~~~ */
+.about_app{
+  padding: 0 0 80px ;
+}
+.about_app .intro_text h3 ,
+.about_app .intro_text p{
+  color: rgb(33, 33, 33);
+  width: auto;
+  text-align: start;
+}
+
+.about_app .screen_ {
+  max-width: 100%;
+  width: auto;
+  margin:0;
+}
+.about_app .intro_text{
+  align-items: flex-start;
+}
+@media(max-width:992px){
+  .about_app .screen_ {
+    padding-top: 20px;
+  }
+  .about_app {
+    padding: 20px 0 60px;
+}
+.intro_text p{
+  width: auto;
+}
+.about_app .intro_text{
+  align-items: center;
+}
+}
+/* ~~~~~~~~~~~~~~~~~~end about_app~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~start add_App ~~~~~~~~~~~~~~~~~~~~ */
+.add_App_parant{
+  background-color: rgb(10, 8, 43);
+  padding: 50px 0;
+}
+.add_app h5{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Tajawal";
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+@media(max-width:767px){
+  .add_app h5{
+    text-align: center;
+    font-size: 19px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .add_App_parant {
+    padding: 40px 0;
+  }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~end add_App ~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~start Features~~~~~~~~~~~~~~~~~~~ */
+.Features_parant{
+  padding: 80px 0 100px;
+  background-color: rgb(250, 250, 250);
+  position: relative;
+}
+.Features_parant .backg_left{
+  position:absolute;
+  top:100px;
+  left:0;
+  clip-path: polygon(0 0, 0% 100%, 100% 53%);
+  background-color: rgb(238, 243, 250);
+  width: 607px;
+  height: 1402px;
+  /* z-index: -1; */
+
+}
+.Features {
+  position: relative;
+  z-index: 11;
+}
+
+.parant_div{
+  text-align: start;
+  height: 420px;
+  overflow-y:scroll;
+  direction: ltr;
+}
+html[dir="ltr"] .parant_div {
+  direction: rtl;
+  height: 490px;
+  }
+  .Features_parant h3{
+    font-size: 30px;
+    font-family: "Tajawal";
+    color: rgb(33, 33, 33);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .Features_parant .p_feat{
+    text-align: center;
+    width: 48%;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: 16px;
+    color: rgb(117, 117, 117);
+    font-weight: 400;
+  }
+
+.Feat_title_{
+  text-align: start;
+  font-size: 30px;
+  font-family: "Tajawal";
+  color: rgb(33, 33, 33);
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.featur_right{
+  text-align: end;
+}
+.featur_start{
+  text-align: start;
+}
+.Features_div{
+  display: flex;
+  align-items: flex-start;
+  border-radius: 14px;
+  direction: rtl;
+  margin-bottom: 30px;
+}
+.Features_div i{
+  font-size: 45px;
+  color: rgb(220, 53, 69);
+}
+.featur_left i{
+  margin-inline-end: 20px;
+}
+.featur_right i{
+  margin-inline-start: 20px;
+}
+.featur_left{
+  text-align: start ;
+}
+.div_text h4{
+  font-size: 22px;
+  font-family: "Tajawal";
+  color: rgb(33, 33, 33);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.div_text p{
+  font-size: 16px;
+  font-family: "Tajawal";
+  color: rgb(117, 117, 117);
+  font-weight: 400;
+}
+.img_center{
+  width: 100%;
+  text-align: center;
+}
+@media(max-width:992px){
+  .Features_parant {
+    padding:70px 0px;
+    margin-bottom: 50px;
+  }
+  .mob_{
+    margin-bottom: 30px;
+  }
+  .Feat_title_{
+    text-align: center;
+  }
+}
+@media(max-width:767px){
+  .div_text h4 {
+    font-size: 20px;
+  }
+  .Features_parant .p_feat{
+    width: auto;
+  }
+  .featur_right .Features_div{
+    flex-direction:column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .featur_left .Features_div{
+    flex-direction: column;
+    align-items: center;
+  }
+  .div_text{
+    text-align: center;
+  }
+  .featur_right i,.featur_left i{
+    margin: 0 0 10px 0;
+  }
+  .img_center {
+    margin-bottom: 40px;
+  }
+
+}
+/* ~~~~~~~~~~~~~~~~~~end heaFeaturesder~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~start slider~~~~~~~~~~~~~~~~~~~ */
+.slider_parant{
+  text-align: center;
+  padding-bottom: 120px;
+  background-color: rgb(250, 250, 250);
+  z-index: 999;
+}
+.slider_parant .Feat_title_ {
+  text-align: center;
+}
+.slider_parant p{
+  font-size: 16px;
+  font-family: "Tajawal";
+  color: rgb(117, 117, 117);
+  width: 34%;
+  margin: 0 auto 40px;
+}
+.slider{
+  position: relative;
+}
+.slider .owl-dots{
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  left: 50%;
+}
+.slider  .owl-dots .owl-dot{
+  border-radius: 50%;
+  background-color: rgb(224, 224, 224);
+  width: 8px;
+  height: 8px;
+}
+.slider  .owl-dots .owl-dot:focus{
+  outline: 0;
+}
+.slider  .owl-dots .owl-dot:not(.owl-dots .owl-dot:last-child){
+  margin-inline-end: 5px;
+}
+.slider  .owl-dots .owl-dot.active{
+  background-color: rgb(220, 53, 69);
+
+}
+
+@media(max-width:767px){
+  .slider_parant p{
+    width: auto;
+  }
+  .Feat_title_{
+    margin-bottom: 30px;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~end slider~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~start footer~~~~~~~~~~~~~~~~~~~ */
+footer{
+  padding: 50px 0;
+}
+.footer_div{
+  text-align: start;
+}
+.footer_div .logo{
+  margin-bottom: 20px;
+}
+.footer_div p{
+  font-size: 14px;
+  font-family: "Tajawal";
+  color: rgb(97, 97, 97);
+  font-weight: 500;
+  width: 85%;
+}
+.footer_div h4{
+  font-size: 20px;
+  font-family: "Tajawal";
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-inline-start: 30px;
+}
+.contct_us{
+  margin-bottom: 20px;
+  margin-inline-start: 30px;
+}
+.contct_us h5{
+  font-size: 16px;
+  font-family: "Tajawal";
+  color: rgb(117, 117, 117);
+  font-weight: 500;
+}
+
+.contct_us a{
+  font-size: 16px;
+  font-family: "Tajawal";
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.contct_us i{
+  color: #d43396;
+  margin-inline-end: 5px;
+}
+.footer_div .btn_intro a:first-child{
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-inline-end: 10px;
+}
+.footer_div .btn_intro{
+  margin-inline-start: 30px;
+}
+.btn_intro .anc_intro{
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.btn_intro .anc_intro:hover{
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+@media(max-width:767px){
+  .footer_div {
+    text-align: center;
+  }
+  .footer_div p{
+    text-align: justify;
+    text-align-last: center;
+    width: 100%;
+  }
+  .footer_div .btn_intro{
+    margin: 0;
+    display: flex;
+    justify-content:center;
+  }
+  .footer_div h4{
+    margin: 0 0 20px 0;
+  }
+  .contct_us{
+    margin-inline-start: 0;
+  }
+  .footer_div p{
+    margin-bottom: 30px;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~end footer~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~start copy_rights~~~~~~~~~~~~~~~~~~~ */
+.div_copy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.social-media{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.social-media a{
+  font-size: 20px;
+  color: rgb(97, 97, 97);
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.social-media a:hover{
+  color: #0a082b;
+}
+.social-media a:not(.social-media a:last-child){
+  margin-inline-end: 30px;
+}
+.div_copy h6{
+  margin-inline-end: 10px;
+  font-size: 14px;
+  font-family: "Tajawal";
+  color: rgb(57, 60, 60);
+  font-weight: 400;
+}
+
+/* ~~~~~~~~~~~~~~~~~~end copy_rights~~~~~~~~~~~~~~~~~~~ */
