@@ -150,7 +150,7 @@ header{
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 20;
 }
 .ul_navbar{
   display: flex;
@@ -174,11 +174,12 @@ header{
   text-decoration: none;
 }
 .anc_lang{
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 18px;
   font-family: "Tajawal";
   color: #ffffff;
   transition: .5s;
+  direction: ltr;
 }
 .btn_bars{
   font-size: 16px;
@@ -190,7 +191,7 @@ header{
 .close_{
   display: none;
 }
-.ul_navbar li a:hover,.anc_lang:hover,.btn_bars:hover,.close_{
+.ul_navbar li a:hover,.anc_lang:hover,.btn_bars:hover{
   color: #0a082b;
 }
 @media(max-width:767px){
@@ -199,11 +200,11 @@ header{
     position: fixed;
     top: 0;
     height: 100%;
-    width: 90%;
+    width: 100%;
     background-color: #ffffff;
     z-index: 999;
-    padding: 80px 20px 0;
-    text-align: start;
+    padding: 100px 20px 0;
+    text-align: center;
   }
   html[dir="rtl"] .ul_navbar {
     right: 0;
@@ -221,23 +222,24 @@ header{
     .btn_bars{
       display: block;
     }
-    .close_{
+    .ul_navbar .close_{
+      position: absolute;
+      top: 20px;
+      font-size: 19px;
       display: block;
-      font-size: 16px;
-      color: #b3acac;
+      color: #e0e0e0;
+      cursor: pointer;
       transition: .5s;
       -webkit-transition: .5s;
       -moz-transition: .5s;
       -ms-transition: .5s;
       -o-transition: .5s;
-      position: absolute;
-      top: 20px;
-    }
-    html[dir="rtl"] .close_ {
-      left: 20px;
+}
+    html[dir="rtl"] .ul_navbar .close_{
+      left: 30px;
       }
-    html[dir="ltr"] .close_ {
-      right: 20px;
+    html[dir="ltr"] .ul_navbar .close_{
+      right: 30px;
       }
       header {
         padding: 10px 0 30px;
@@ -245,7 +247,11 @@ header{
     .logo img{
       width: 140px;
     }
+    .close_:hover{
+      color: #000000;
+    }
 }
+
 /* ~~~~~~~~~~~~~~~~~~end header~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -345,6 +351,8 @@ header{
   .intro_parant {
     margin-bottom: 20px;
     padding-bottom: 50px;
+    clip-path: ellipse(200% 100% at 50% 0%);
+
   }
 
 }
@@ -369,9 +377,19 @@ header{
 .about_app .intro_text{
   align-items: flex-start;
 }
+  .intro > h3{
+    font-size: 30px;
+    font-family: "Tajawal";
+    color: rgb(33, 33, 33);
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+  }
 @media(max-width:992px){
   .about_app .screen_ {
     padding-top: 20px;
+    display: flex;
+    margin: auto;
   }
   .about_app {
     padding: 20px 0 60px;
@@ -588,14 +606,7 @@ html[dir="ltr"] .Features_div {
 .slider_parant .Feat_title_ {
   text-align: center;
 }
-.slider_parant p{
-  font-size: 16px;
-  font-family: "Tajawal";
-  color: rgb(117, 117, 117);
-  width: 34%;
-  margin: 0 auto 40px;
-}
-.slider{
+.slide_{
   position: relative;
 }
 .slider .owl-dots{
@@ -629,7 +640,14 @@ html[dir="ltr"] .Features_div {
   max-width: 100%;
   margin: auto;
 }
-
+.slide_hover a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 @media(max-width:992px){
   .slider_parant p{
     width: auto;
@@ -697,6 +715,7 @@ footer{
 }
 .footer_div .btn_intro{
   margin-inline-start: 30px;
+  display: flex;
 }
 .btn_intro .anc_intro{
   transition: .5s;

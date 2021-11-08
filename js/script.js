@@ -18,11 +18,29 @@ if ($(window).width() <= 767) {
   $(".ul_navbar a").click(function(){
     $(".close_ ").trigger("click");
   })
+  $(".ul_navbar a").click(function(){
+    $(".moboverlay").fadeOut(500);
+    $("body").removeClass("over");
+  })
 }
-$(".ul_navbar a").click(function(){
-  $(".moboverlay").fadeOut(500);
-  $("body").removeClass("over");
-})
+
+
+jQuery(window).on('scroll', function() {
+  if(jQuery(window).scrollTop() > 200) {
+      jQuery('header').css({
+          "background-color": "#b6304b",
+          "position": "fixed",
+          "box-shadow": "rgb(136 153 166 / 20%) 0px 0px 15px 0px, rgb(136 153 166 / 15%) 0px 0px 3px 1px"
+        });
+  } else {
+    jQuery('header').css({
+      "background-color":"unset",
+      "padding":"15px 0",
+      "box-shadow": "unset",
+      "position": "absolute"
+    });
+  }
+});
 /* ~~~~~~~~~~~~~~~~~~end header~~~~~~~~~~~~~~~~~~~ */
 
   /*~~~~~~~~~~~~~~~~~~~~start slider~~~~~~~~~~~~~~~~~~~~ */
@@ -59,25 +77,27 @@ $(".ul_navbar a").click(function(){
         
         $("#click_about").click(function () {
           $('html, body').animate({
-              scrollTop: $("#about_").offset().top -1
+              scrollTop: $("#about_").offset().top -70
           }, 1000);
         });
         
         $("#click_features").click(function () {
           $('html, body').animate({
-              scrollTop: $("#features").offset().top -1
+              scrollTop: $("#features").offset().top -70
           }, 1000);
         });
         
         $("#click_screens_").click(function () {
           $('html, body').animate({
-              scrollTop: $("#screens_").offset().top -1
+              scrollTop: $("#screens_").offset().top -70
           }, 1000);
         });
         $("#click_contact").click(function () {
           $('html, body').animate({
-              scrollTop: $("#contact_").offset().top -1
+              scrollTop: $("#contact_").offset().top -70
           }, 1000);
         });
 
 });
+
+
